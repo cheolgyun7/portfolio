@@ -22,6 +22,7 @@ const HomeDetail = () => {
           repeat={Infinity}
           style={{ width: '7em' }}
         />
+        <br />
         김철균 입니다
       </motion.div>
       <Image

@@ -51,24 +51,23 @@ const Project = () => {
               </div>
               {hoveredIndex === index && (
                 <div
-                  className={`absolute inset-0 flex justify-around items-center  bg-opacity-80 ${
-                    isDarkMode ? 'bg-black' : 'bg-white'
-                  }`}>
+                  className={`absolute inset-0 flex justify-around items-center  bg-opacity-80 ${isDarkMode ? 'bg-black' : 'bg-white'
+                    }`}>
                   {info.hoverIcon.map((icon, i) => (
                     <Link
                       key={i}
                       href={icon.href}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='hover:text-purple-600'>
+                      className='hover:text-purple-600 mx-auto text-center'>
                       {i === 0 ? (
-                        <IoHomeSharp size={32} />
+                        <IoHomeSharp className='mx-auto' size={32} />
                       ) : i === 1 ? (
-                        <IoLogoGithub size={32} />
+                        <IoLogoGithub className='mx-auto' size={32} />
                       ) : (
-                        <MdEventNote size={32} />
+                        <MdEventNote className='mx-auto' size={32} />
                       )}
-                      <span>{icon.tooltip}</span>
+                      <div>{icon.tooltip}</div>
                     </Link>
                   ))}
                 </div>
